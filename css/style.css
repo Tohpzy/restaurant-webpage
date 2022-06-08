@@ -1,0 +1,287 @@
+/* Google Font Import + poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --blue: rgb(16, 60, 106);
+    --black: black;
+    --light-color: rgb(70, 70, 70);
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    /* display: flex; */
+}
+
+
+body
+/* width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+/* background-color: rgb(21, 139, 160); */
+
+
+/* section style continues here  */
+
+section {
+    padding: 2rem 9%;
+}
+
+/* section :nth-child(even) {
+    background-color: rgb(250, 252, 251);
+} */
+
+
+.btn {
+    display: inline-block;
+    color: white;
+    padding: 5px 7px;
+    font-size: 2rem;
+    border-radius: 2px;
+    background: var(--blue);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(47, 46, 46);
+    color: white;
+
+}
+
+/* header style starts here  */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 7%;
+    background-color: rgb(235, 235, 235);
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo {
+    color: var(--black);
+    font-size: 2.3rem;
+    font-weight: bolder;
+
+}
+
+header .logo i {
+    color: var(--blue);
+}
+
+header nav a {
+    font-size: 1.4rem;
+    border-radius: 0.6rem;
+    padding: 0.5rem 1.5rem;
+    /* padding: 0.5rem 0.8rem; */
+    color: var(--light-color)
+}
+
+header nav a.active,
+header nav a:hover {
+    padding: 0.5rem 1.5rem;
+    background: var(--blue);
+    color: white;
+
+}
+
+header .icons i,
+header .icons a {
+    cursor: pointer;
+    margin-left: 0.6rem;
+    height: 3.2rem;
+    width: 3.2rem;
+    line-height: 3.2rem;
+    /* padding: 0.8rem; */
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
+    border-radius: 50%;
+    font-size: 1.7rem;
+    color: black;
+    background-color: white;
+}
+
+header .icons i:hover,
+header .icons a:hover {
+    color: white;
+    background-color: var(--blue);
+    transform: rotate(360deg);
+
+}
+
+header .icons #menu_bars {
+    display: none;
+
+}
+
+/* header style ends here  */
+
+
+/* section form  style starts here */
+#search-form {
+    /* border: 1px solid red; */
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+
+}
+
+
+#search-form.active {
+    top: 0;
+}
+
+#search-form #search-box {
+    width: 50rem;
+    border-bottom: .1rem solid white;
+    padding: 1rem 0;
+    color: white;
+    font-size: 3rem;
+    text-transform: none;
+    background: none;
+}
+
+#search-form #search-box::placeholder {
+    color: rgb(219, 218, 218);
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+
+#search-form label {
+    color: white;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+#search-form label:hover {
+    color: var(--blue);
+
+}
+
+#search-form #close {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+}
+
+.home .home-slider .slide {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+
+}
+
+
+.home .home-slider .slide .content {
+    flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image img {
+    width: 100%;
+    /* align-items: center; */
+}
+
+.home .home-slider .slide .content span {
+    color: var(--blue);
+    /* font-weight: bold; */
+    font-size: 2.5rem
+}
+
+.home .home-slider .slide .content h3 {
+    color: var(--black);
+    /* font-weight: bold; */
+    font-size: 2.5rem;
+}
+
+.home .home-slider .slide .content p {
+    color: var(--light-color);
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+
+
+/* media queries */
+@media (max-width:991px) {
+    html {
+        font-size: 50%
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+}
+
+
+@media (max-width:768px) {
+    header .icons #menu_bars {
+        display: inline-block;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header nav.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header nav a {
+        display: block;
+        padding: 0.5rem;
+        margin: 0.7rem;
+        background-color: #eee;
+        font-size: 1.5rem;
+    }
+
+}
